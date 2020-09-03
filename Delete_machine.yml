@@ -1,0 +1,21 @@
+# Description
+# ===========
+# This playbook create an Azure VM with public IP, and open 22 port for SSH, an$
+# This playbook create an Azure VM with public IP
+# Change variables below to customize your VM deployment
+
+- name: Delete Resoure group
+  hosts: localhost
+  connection: local
+  vars:
+    machine: "{{ machine_name }}"
+    resource_group: "{{ resource_group_name }}"
+  tasks:
+  - name: Terminate virtual machine example                      
+    azure_rm_virtualmachine:
+#    azure:
+      resource_group: "{{ resource_group }}"
+      name: "{{ machine }}"
+#      force_delete_nonempty: yes
+      state: absent
+    delegate_to: localhost
