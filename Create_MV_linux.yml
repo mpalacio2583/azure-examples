@@ -10,7 +10,7 @@
   vars:
     resource_group: "{{ resource_group_name }}"
     vm_name: "{{ virtual_machine_name }}"
-    nic_name: "{{ nicname }}"
+    subnet_name: "{{ subnetname }}"
     location: "{{ location_name }}"
     network: "{{ network_name }}"
     password: "{{ password_name }}"
@@ -61,8 +61,8 @@
     azure_rm_networkinterface:
       resource_group: "{{ resource_group }}"
       name: "{{ vm_name }}"
-      virtual_network: "{{ vm_name }}"
-      subnet: "{{ network }}"
+      virtual_network: "{{ network }}"
+      subnet: "{{ subnet_name }}"
       public_ip_name: "{{ vm_name }}"
       security_group: "{{ vm_name }}"
       
