@@ -4,6 +4,8 @@
 # This playbook create an Azure VM with public IP
 # Change variables below to customize your VM deployment
 
+#Esta funciona
+
 - name: Create Azure VM
   hosts: localhost
   connection: local
