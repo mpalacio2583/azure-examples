@@ -10,6 +10,7 @@
   vars:
     resource_group: "{{ resource_group_name }}"
     vm_name: "{{ virtual_machine_name }}"
+    nic_name: "{{ nicname }}"
     location: "{{ location_name }}"
     network: "{{ network_name }}"
     password: "{{ password_name }}"
